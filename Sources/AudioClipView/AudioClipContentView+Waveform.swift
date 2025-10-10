@@ -124,7 +124,7 @@ public extension AudioClipContentView {
 
         ctx.addPath(path)
         ctx.setLineCap(.butt)
-        ctx.setStrokeColor(UIColor.label.cgColor)
+        ctx.setStrokeColor(AudioEditorKitColor.waveformForeground.cgColor)
         ctx.strokePath()
 
         ctx.restoreGState()

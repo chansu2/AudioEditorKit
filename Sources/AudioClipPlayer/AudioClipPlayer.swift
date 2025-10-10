@@ -530,7 +530,6 @@ private extension AudioClipPlayer {
         }
         cmdCenter.changePlaybackPositionCommand.isEnabled = true
         mChangePlaybackPositionCommandTarget = cmdCenter.changePlaybackPositionCommand.addTarget { [unowned self] event in
-
             guard isPrepared else {
                 return .noActionableNowPlayingItem
             }

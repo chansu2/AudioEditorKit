@@ -61,9 +61,9 @@ public final class AudioClipControlView: UIView {
         setNeedsDisplay()
     }
 
-    static let anchorControlColor = UIColor(named: "FailureColor", in: .module, compatibleWith: nil)!
-    static let backgroundColor = UIColor(named: "WarningColor", in: .module, compatibleWith: nil)!
-    static let indicatorColor = UIColor.systemBlue
+    static let anchorControlColor = AudioEditorKitColor.failure
+    static let backgroundColor = AudioEditorKitColor.warning
+    static let indicatorColor = AudioEditorKitColor.primary
 
     static let anchorCircleSpacing: CGFloat = 9.0
     static let anchorControlWidth: CGFloat = 25.0

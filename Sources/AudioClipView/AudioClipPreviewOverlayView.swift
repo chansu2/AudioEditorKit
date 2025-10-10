@@ -8,10 +8,9 @@
 import AudioClip
 import AudioClipPlayer
 import Combine
-import Foundation
 import UIKit
 
-public final class AudioClipPreviewOverlayView: HitTestView {
+public final class AudioClipPreviewOverlayView: UIView {
     public weak var audioClip: AudioClip? {
         didSet {
             reloadAudioClip()
@@ -19,9 +18,28 @@ public final class AudioClipPreviewOverlayView: HitTestView {
     }
 
     public weak var player: AudioClipPlayer?
-    public var isEnabled: Bool = true
 
-    private var cancellables = Set<AnyCancellable>()
+    public var isEnabled: Bool {
+        get { isUserInteractionEnabled }
+        set { isUserInteractionEnabled = newValue }
+    }
+
+    private var cancellables: Set<AnyCancellable> = []
+
+    init() {
+        super.init(frame: .zero)
+        _commonInit()
+    }
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func _commonInit() {
+        backgroundColor = .clear
+        layer.masksToBounds = false
+    }
 
     private func reloadAudioClip() {
         cancellables.forEach { $0.cancel() }
@@ -43,36 +61,17 @@ public final class AudioClipPreviewOverlayView: HitTestView {
         setNeedsDisplay()
     }
 
-    override public func awakeFromNib() {
-        super.awakeFromNib()
-        backgroundColor = .clear
-    }
-
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        setNeedsDisplay()
-    }
+    static let foregroundColor = AudioEditorKitColor.label
+    static let backgroundColor = AudioEditorKitColor.warning
+    static let indicatorColor = AudioEditorKitColor.primary
+    static let backgroundOpacity: CGFloat = 0.2
 
     static let anchorWidth: CGFloat = 12.0
     static let borderWidth: CGFloat = 2.0
     static let indicatorWidth: CGFloat = 4.0
 
-    private static let leadingImage: UIImage = {
-        let configuration = UIImage.SymbolConfiguration(pointSize: 48, weight: .regular)
-        return UIImage(systemName: "chevron.compact.left", withConfiguration: configuration)!
-            .withTintColor(foregroundColor, renderingMode: .alwaysTemplate)
-    }()
-
-    private static let trailingImage: UIImage = {
-        let configuration = UIImage.SymbolConfiguration(pointSize: 48, weight: .regular)
-        return UIImage(systemName: "chevron.compact.right", withConfiguration: configuration)!
-            .withTintColor(foregroundColor, renderingMode: .alwaysTemplate)
-    }()
-
-    private static let foregroundColor = UIColor.label
-    private static let backgroundColor = UIColor(named: "WarningColor", in: .module, compatibleWith: nil)!
-    private static let indicatorColor = UIColor.systemBlue
-    private static let backgroundOpacity: CGFloat = 0.2
+    static let leadingImage = UIImage(systemName: "chevron.left")!
+    static let trailingImage = UIImage(systemName: "chevron.right")!
 
     override public func draw(_: CGRect) {
         guard let audioClip,
@@ -176,10 +175,7 @@ public final class AudioClipPreviewOverlayView: HitTestView {
             let rangeRect = underlyingRect.insetBy(dx: Self.indicatorWidth / 2, dy: 0)
             let currentPositionX = rangeRect.minX + rangeRect.width * CGFloat(audioClip.currentTime / audioClip.duration)
             let indicatorRect = CGRect(
-                x: clamp(
-                    currentPositionX - Self.indicatorWidth / 2,
-                    to: startPositionX ... endPositionX - Self.indicatorWidth
-                ),
+                x: min(max(currentPositionX - Self.indicatorWidth / 2, startPositionX), endPositionX - Self.indicatorWidth),
                 y: rangeRect.minY,
                 width: Self.indicatorWidth,
                 height: rangeRect.height

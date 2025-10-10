@@ -54,7 +54,7 @@ public final class ProgressHUDManager {
         ProgressHUD.colorBackground = .clear
         ProgressHUD.colorHUD = .systemBackground
         ProgressHUD.colorAnimation = .label
-        ProgressHUD.fontStatus = UIFont.preferredFont(forTextStyle: .title3)
+        ProgressHUD.fontStatus = AudioEditorKitFont.hudStatus
     }
 
     static func showHUD(in view: UIView, setupClosure: (() -> Void)? = nil) {

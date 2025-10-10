@@ -12,7 +12,7 @@ import WaveformAnalyzer
 class WaveImageView: UIView {
     var isTransitionEnabled: Bool = true
     var contentInsets: UIEdgeInsets { .init(top: 8, left: 0, bottom: 8, right: 0) }
-    var foregroundColor: UIColor { .secondaryLabel }
+    var foregroundColor: UIColor { AudioEditorKitColor.secondaryLabel }
 
     // MARK: - Updates
 

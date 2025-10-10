@@ -55,7 +55,7 @@ public extension AudioClipPreviewOverlayView {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with _: UIEvent?) {
-        guard isEnabled,
+        guard isUserInteractionEnabled,
               activeAnchor == nil,
               let anyTouch = touches.first,
               anyTouch.tapCount == 1,

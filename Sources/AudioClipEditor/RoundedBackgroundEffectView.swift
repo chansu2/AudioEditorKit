@@ -9,7 +9,7 @@ import UIKit
 
 private class CircleEffectView: UIView {
     override func draw(_ rect: CGRect) {
-        UIColor.quaternarySystemFill.setFill()
+        AudioEditorKitColor.waveformBackground.setFill()
         UIBezierPath(
             arcCenter: CGPoint(x: rect.width / 2, y: rect.height / 2),
             radius: rect.width / 2,

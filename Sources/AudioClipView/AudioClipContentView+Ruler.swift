@@ -8,8 +8,8 @@
 import UIKit
 
 public extension AudioClipContentView {
-    static let rulerColor: UIColor = .tertiarySystemFill
-    static let rulerLabelColor: UIColor = .tertiaryLabel
+    static let rulerColor: UIColor = AudioEditorKitColor.rulerColor
+    static let rulerLabelColor: UIColor = AudioEditorKitColor.rulerLabelColor
     static let rulerHeight: CGFloat = 32.0
 
     private static let rulerLineWidth: CGFloat = 0.75
@@ -17,7 +17,7 @@ public extension AudioClipContentView {
     private static let rulerSecondaryHeight: CGFloat = 5.0
     private static let rulerLabelAttributes: [NSAttributedString.Key: Any] = [
         .font: UIFont.monospacedDigitSystemFont(ofSize: 12.0, weight: .regular),
-        .foregroundColor: UIColor.tertiaryLabel,
+        .foregroundColor: AudioEditorKitColor.rulerLabelColor,
     ]
 
     private static let defaultPointsPerSecond: CGFloat = 192.0

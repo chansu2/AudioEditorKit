@@ -16,7 +16,7 @@ public extension AudioClipContentView {
         ))
     }
 
-    static let backgroundColor: UIColor = .quaternarySystemFill
+    static let backgroundColor: UIColor = AudioEditorKitColor.waveformBackground
 
     static func drawBackgroundInBounds(
         _ bounds: CGRect,

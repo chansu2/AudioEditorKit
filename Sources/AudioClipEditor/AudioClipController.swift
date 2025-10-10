@@ -241,34 +241,34 @@ public final class AudioClipController: UIViewController {
         trimButton.setAttributedTitle(NSAttributedString(
             string: String(localized: "Trim", bundle: .module),
             attributes: [
-                .font: UIFont.systemFont(ofSize: 15.0, weight: .semibold),
-                .foregroundColor: UIColor.label,
+                .font: AudioEditorKitFont.button,
+                .foregroundColor: AudioEditorKitColor.label,
             ]
         ), for: .normal)
         trimButton.setAttributedTitle(NSAttributedString(
             string: String(localized: "Trim", bundle: .module),
             attributes: [
-                .font: UIFont.systemFont(ofSize: 15.0, weight: .semibold),
-                .foregroundColor: UIColor.label.withAlphaComponent(0.25),
+                .font: AudioEditorKitFont.button,
+                .foregroundColor: AudioEditorKitColor.label.withAlphaComponent(0.25),
             ]
         ), for: .disabled)
 
         deleteButton.setAttributedTitle(NSAttributedString(
             string: String(localized: "Delete", bundle: .module),
             attributes: [
-                .font: UIFont.systemFont(ofSize: 15.0, weight: .semibold),
-                .foregroundColor: UIColor.label,
+                .font: AudioEditorKitFont.button,
+                .foregroundColor: AudioEditorKitColor.label,
             ]
         ), for: .normal)
         deleteButton.setAttributedTitle(NSAttributedString(
             string: String(localized: "Delete", bundle: .module),
             attributes: [
-                .font: UIFont.systemFont(ofSize: 15.0, weight: .semibold),
-                .foregroundColor: UIColor.label.withAlphaComponent(0.25),
+                .font: AudioEditorKitFont.button,
+                .foregroundColor: AudioEditorKitColor.label.withAlphaComponent(0.25),
             ]
         ), for: .disabled)
 
-        currentTimeLabel.font = .monospacedDigitSystemFont(ofSize: isPad ? 38.0 : 46.0, weight: .semibold)
+        currentTimeLabel.font = isPad ? AudioEditorKitFont.timeLabelPad : AudioEditorKitFont.timeLabel
 
         playPauseButton.configuration = playPauseButtonConfiguration
         playPauseButton.automaticallyUpdatesConfiguration = true
