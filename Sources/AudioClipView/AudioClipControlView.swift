@@ -160,10 +160,6 @@ public final class AudioClipControlView: UIView {
         } else {
             endAnchorBounds = .zero
         }
-
-        #if DEBUG
-            drawDebugControlMask(in: ctx)
-        #endif
     }
 
     static func drawAnchor(
