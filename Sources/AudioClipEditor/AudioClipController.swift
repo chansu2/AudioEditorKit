@@ -102,7 +102,7 @@ public final class AudioClipController: UIViewController {
             _cancelAction()
             return
         }
-        if context.isAbleToSave {
+        if context.hasChanges {
             let alertCtrl = UIAlertController(
                 title: String(localized: "Discard Changes", bundle: .module),
                 message: String(localized: "Are you sure you want to discard the changes you made?", bundle: .module),
@@ -121,7 +121,16 @@ public final class AudioClipController: UIViewController {
     }
 
     @IBAction func saveAction(_: UIBarButtonItem) {
-        _saveAction()
+        if context.hasChanges {
+            _saveAction()
+        } else {
+            tearDownPlayer(beforeSave: true)
+            tearDownTimers()
+            dismiss(animated: true) { [weak self] in
+                guard let self else { return }
+                self.completionHandler?(true, self.audio.url)
+            }
+        }
     }
 
     @IBAction func trimAction(_: UIButton) {
@@ -294,6 +303,9 @@ public final class AudioClipController: UIViewController {
 
         goBackwardButton.accessibilityLabel = String(localized: "Rewind 15 Seconds", bundle: .module)
         goForwardButton.accessibilityLabel = String(localized: "Forward 15 Seconds", bundle: .module)
+
+        saveButtonItem.title = String(localized: "Use Original", bundle: .module)
+        saveButtonItem.isEnabled = true
     }
 
     private func setupContext() {
@@ -388,12 +400,18 @@ public final class AudioClipController: UIViewController {
     }
 
     private func reloadEditableState() {
-        let isAbleToSave = context.isAbleToSave
         let isEditable = audioClip.isEditable
 
         messageLabel.isHidden = true
         cancelButtonItem.isEnabled = true
-        saveButtonItem.isEnabled = isAbleToSave
+
+        if context.hasChanges {
+            saveButtonItem.title = String(localized: "Save Edited", bundle: .module)
+        } else {
+            saveButtonItem.title = String(localized: "Use Original", bundle: .module)
+        }
+        saveButtonItem.isEnabled = true
+
         trimButton.isEnabled = isEditable
         goBackwardButton.isEnabled = true
         playPauseButton.isEnabled = true

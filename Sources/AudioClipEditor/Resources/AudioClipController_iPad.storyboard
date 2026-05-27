@@ -301,7 +301,7 @@
                                 <action selector="cancelAction:" destination="RfD-VD-lwe" id="6XP-BH-lDi"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="save" id="hHT-gc-qHc">
+                        <barButtonItem key="rightBarButtonItem" style="done" title="Use Original" id="hHT-gc-qHc">
                             <connections>
                                 <action selector="saveAction:" destination="RfD-VD-lwe" id="RIj-9t-Qdf"/>
                             </connections>

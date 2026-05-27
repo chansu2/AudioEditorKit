@@ -25,7 +25,8 @@ public final class AudioClipContext: NSObject {
     public var currentPreviewURL: URL { current.value.previewAudioFile?.url ?? currentURL }
     public let temporaryDirectory: URL
 
-    public var isAbleToSave: Bool { operationCount > 1 }
+    public var isAbleToSave: Bool { true }
+    public var hasChanges: Bool { operationCount > 1 }
 
     private static let maximumPreviewLength: TimeInterval = 1800 // 30 minutes
     public var shouldRenderWaveform: Bool {

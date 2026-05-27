@@ -226,7 +226,7 @@
                                 <action selector="cancelAction:" destination="4DH-34-p2d" id="n6b-WU-ADf"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="save" id="93S-Ly-mbk">
+                        <barButtonItem key="rightBarButtonItem" style="done" title="Use Original" id="93S-Ly-mbk">
                             <connections>
                                 <action selector="saveAction:" destination="4DH-34-p2d" id="dUl-e3-bv0"/>
                             </connections>
