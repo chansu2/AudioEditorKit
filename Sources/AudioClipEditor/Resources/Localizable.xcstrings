@@ -6,466 +6,138 @@
     },
     "Are you sure you want to discard the changes you made?" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "你确定要放弃所有的更改？"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "変更を破棄してもよろしいですか？"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Êtes-vous sûr de vouloir annuler les modifications apportées ?"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sind Sie sicher, dass Sie die vorgenommenen Änderungen verwerfen möchten?"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "지금까지 변경한 내용을 모두 취소하시겠어요?" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "¿Estás seguro de que deseas descartar los cambios realizados?" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Вы уверены, что хотите отменить внесённые изменения?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "你确定要放弃所有的更改？" } }
       }
     },
     "Audio File" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "音频文件"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "オーディオファイル"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fichier audio"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Audiodatei"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "오디오 파일" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Archivo de audio" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Аудиофайл" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "音频文件" } }
       }
     },
     "Cancel" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "取消"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "キャンセル"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbrechen"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "취소" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Cancelar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отмена" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "取消" } }
       }
     },
     "Decoding" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "解码中"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "デコード中"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Décodage"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dekodierung"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "디코딩 중" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Decodificando" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Декодирование" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "解码中" } }
       }
     },
     "Delete" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "删除"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "削除"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Supprimer"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Löschen"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "삭제" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Eliminar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Удалить" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "删除" } }
       }
     },
     "Discard" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "撤销"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "破棄"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verwerfen"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "취소" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Descartar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отменить" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "撤销" } }
       }
     },
     "Discard Changes" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "撤销更改"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "変更を破棄"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Annuler les modifications"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Änderungen verwerfen"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "변경 사항 취소" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Descartar cambios" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Отменить изменения" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "撤销更改" } }
       }
     },
     "Encoding" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "编码中"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "エンコード中"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Encodage"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kodierung"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "인코딩 중" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Codificando" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Кодирование" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "编码中" } }
       }
     },
     "Forward 15 Seconds" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "前进 15 秒"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "15秒進む"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Avancer de 15 secondes"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "15 Sekunden vorspulen"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "15초 앞으로" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Avanzar 15 segundos" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Вперёд на 15 секунд" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "前进 15 秒" } }
       }
     },
     "Operation Failed" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "操作失败"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "操作が失敗しました"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L'opération a échoué"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vorgang fehlgeschlagen"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "작업 실패" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Error en la operación" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Ошибка операции" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "操作失败" } }
       }
     },
     "Pause" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "暂停"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "一時停止"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pause"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pause"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "일시 정지" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Pausar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Пауза" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "暂停" } }
       }
     },
     "Play" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "播放"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "再生"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lire"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abspielen"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "재생" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Reproducir" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Воспроизведение" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "播放" } }
       }
     },
     "Preview Disabled" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "预览不可用"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "プレビュー無効"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aperçu désactivé"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vorschau deaktiviert"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "미리보기 불가" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Vista previa desactivada" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Предпросмотр недоступен" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "预览不可用" } }
       }
     },
     "Rewind 15 Seconds" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "后退 15 秒"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "15秒戻る"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reculer de 15 secondes"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "15 Sekunden zurückspulen"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "15초 뒤로" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Retroceder 15 segundos" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Назад на 15 секунд" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "后退 15 秒" } }
       }
     },
     "Trim" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "修剪"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "トリム"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rogner"
-          }
-        },
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Trimmen"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "자르기" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Recortar" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Обрезать" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "修剪" } }
       }
     },
     "Use Original" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "使用原片"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "オリジナルを使用"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "원본 사용"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "원본 사용" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Usar original" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Использовать оригинал" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "使用原片" } }
       }
     },
     "Save Edited" : {
       "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "保存编辑"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "編集を保存"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "편집본 저장"
-          }
-        }
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "편집본 저장" } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Guardar editado" } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Сохранить изменения" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "保存编辑" } }
       }
     }
   },

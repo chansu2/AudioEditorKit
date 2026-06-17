@@ -3,34 +3,20 @@
   "strings" : {
     "Another %@ is required to continue editing. Available capacity is %@." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Another %1$@ is required to continue editing. Available capacity is %2$@."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "需要额外的 %1$@ 的储存空间才能继续编辑。当前可用：%2$@。"
-          }
-        }
+        "en" : { "stringUnit" : { "state" : "new", "value" : "Another %1$@ is required to continue editing. Available capacity is %2$@." } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "편집을 계속하려면 %1$@의 추가 저장 공간이 필요합니다. 현재 사용 가능한 공간: %2$@." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "Se necesita %1$@ adicional para continuar editando. Capacidad disponible: %2$@." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Для продолжения редактирования необходимо ещё %1$@. Доступно: %2$@." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "需要额外的 %1$@ 的储存空间才能继续编辑。当前可用：%2$@。" } }
       }
     },
     "Specified range from %lf to %lf is invalid." : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Specified range from %1$lf to %2$lf is invalid."
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "所指定的范围（%1$lf 至 %2$lf）无效。"
-          }
-        }
+        "en" : { "stringUnit" : { "state" : "new", "value" : "Specified range from %1$lf to %2$lf is invalid." } },
+        "ko" : { "stringUnit" : { "state" : "translated", "value" : "%1$lf부터 %2$lf까지의 범위가 유효하지 않습니다." } },
+        "es" : { "stringUnit" : { "state" : "translated", "value" : "El rango especificado de %1$lf a %2$lf no es válido." } },
+        "ru" : { "stringUnit" : { "state" : "translated", "value" : "Указанный диапазон от %1$lf до %2$lf недействителен." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "所指定的范围（%1$lf 至 %2$lf）无效。" } }
       }
     }
   },
