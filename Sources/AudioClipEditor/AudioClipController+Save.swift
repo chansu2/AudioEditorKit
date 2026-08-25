@@ -42,7 +42,11 @@ public extension AudioClipController {
                 ProgressHUDManager.dismissHUD(in: view) { [weak self] in
                     guard let self else { return }
                     dismiss(animated: true) {
-                        self.completionHandler?(true, savedURL)
+                        // Fix(P1): Defer the SwiftUI State update to a new runloop tick to prevent
+                        // a double-dismiss race between UIKit's dismiss cycle and SwiftUI's re-render.
+                        DispatchQueue.main.async {
+                            self.completionHandler?(true, savedURL)
+                        }
                     }
                 }
             }

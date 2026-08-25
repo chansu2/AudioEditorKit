@@ -93,7 +93,11 @@ public final class AudioClipController: UIViewController {
         tearDownPlayer(beforeSave: false)
         tearDownTimers()
         dismiss(animated: true) { [weak self] in
-            self?.completionHandler?(false, nil)
+            // Fix(P1): Defer the SwiftUI State update to a new runloop tick to prevent
+            // a double-dismiss race between UIKit's dismiss cycle and SwiftUI's re-render.
+            DispatchQueue.main.async {
+                self?.completionHandler?(false, nil)
+            }
         }
     }
 

@@ -52,9 +52,11 @@ private struct AudioEditor: UIViewControllerRepresentable {
             bundle: AudioClipControllerBundle.bundle
         )
         let navController = storyboard.instantiateInitialViewController() as! UINavigationController
-        navController.modalPresentationStyle = .formSheet
+        // Fix(P1): .formSheet conflicts with the parent SwiftUI .fullScreenCover context,
+        // causing UIKit safeAreaInsets contamination and layout shift on dismiss.
+        // Use .fullScreen to match the parent presentation style.
+        navController.modalPresentationStyle = .fullScreen
         navController.modalTransitionStyle = .coverVertical
-        navController.preferredContentSize = CGSize(width: 666, height: 666)
 
         return navController
     }
