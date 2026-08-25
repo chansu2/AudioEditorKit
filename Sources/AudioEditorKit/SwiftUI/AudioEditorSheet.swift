@@ -16,10 +16,11 @@ public extension View {
         isPresented: Binding<Bool>,
         audio: AudioFileRepresentable,
         onAudioChanged: @escaping AudioClipController.AudioEditorCompletionHandler,
-        onDismiss: (() -> Void)? = nil
+        onDismiss: (() -> Void)? = nil,
+        languageCode: String? = nil
     ) -> some View {
         sheet(isPresented: isPresented, onDismiss: onDismiss) {
-            AudioEditor(audio: audio, completion: onAudioChanged)
+            AudioEditor(audio: audio, completion: onAudioChanged, languageCode: languageCode)
         }
     }
 
@@ -31,10 +32,11 @@ public extension View {
         isPresented: Binding<Bool>,
         audio: AudioFileRepresentable,
         onAudioChanged: @escaping AudioClipController.AudioEditorCompletionHandler,
-        onDismiss: (() -> Void)? = nil
+        onDismiss: (() -> Void)? = nil,
+        languageCode: String? = nil
     ) -> some View {
         fullScreenCover(isPresented: isPresented, onDismiss: onDismiss) {
-            AudioEditor(audio: audio, completion: onAudioChanged)
+            AudioEditor(audio: audio, completion: onAudioChanged, languageCode: languageCode)
         }
     }
 }
@@ -44,8 +46,10 @@ public extension View {
 private struct AudioEditor: UIViewControllerRepresentable {
     var audio: AudioFileRepresentable
     var completion: AudioClipController.AudioEditorCompletionHandler
+    var languageCode: String?
 
     func makeUIViewController(context _: Context) -> UINavigationController {
+        AudioClipLocalization.setPreferredLanguageCode(languageCode)
         let isPad = UIDevice.current.userInterfaceIdiom == .pad
         let storyboard = UIStoryboard(
             name: isPad ? "AudioClipController_iPad" : "AudioClipController",
@@ -58,10 +62,16 @@ private struct AudioEditor: UIViewControllerRepresentable {
         navController.modalPresentationStyle = .fullScreen
         navController.modalTransitionStyle = .coverVertical
 
+        if let controller = navController.viewControllers.first as? AudioClipController {
+            controller.audio = audio
+            controller.completionHandler = completion
+        }
+
         return navController
     }
 
     func updateUIViewController(_ controller: UINavigationController, context _: Context) {
+        AudioClipLocalization.setPreferredLanguageCode(languageCode)
         let controller = controller.viewControllers.first as! AudioClipController
         controller.audio = audio
         controller.completionHandler = completion

@@ -84,7 +84,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="y4n-is-i2V"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="修剪" cornerStyle="capsule">
+                                                <buttonConfiguration key="configuration" style="filled" title="Trim" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" name="WarningColor"/>
@@ -191,7 +191,7 @@
                                                     </constraint>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="删除" cornerStyle="capsule">
+                                                <buttonConfiguration key="configuration" style="filled" title="Delete" cornerStyle="capsule">
                                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" name="WarningColor"/>

@@ -49,7 +49,7 @@ class WaveImageView: UIView {
 
     private lazy var overLengthLabel: UILabel = {
         let label = UILabel()
-        label.text = String(localized: "Preview Disabled", bundle: .module)
+        label.text = AudioClipEditorLocalization.string("Preview Disabled")
         label.textColor = foregroundColor
         label.font = .rounded(ofTextStyle: .footnote, weight: .regular)
         label.numberOfLines = 1

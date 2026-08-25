@@ -112,7 +112,7 @@
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="y5H-wI-PgL"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="修剪">
+                                        <buttonConfiguration key="configuration" style="filled" title="Trim">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" name="WarningColor"/>
@@ -164,7 +164,7 @@
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="8XG-15-VOj"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="删除">
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" name="WarningColor"/>

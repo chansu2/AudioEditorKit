@@ -108,13 +108,13 @@ public final class AudioClipController: UIViewController {
         }
         if context.hasChanges {
             let alertCtrl = UIAlertController(
-                title: String(localized: "Discard Changes", bundle: .module),
-                message: String(localized: "Are you sure you want to discard the changes you made?", bundle: .module),
+                title: AudioClipEditorLocalization.string("Discard Changes"),
+                message: AudioClipEditorLocalization.string("Are you sure you want to discard the changes you made?"),
                 preferredStyle: .alert
             )
 
-            alertCtrl.addAction(title: String(localized: "Cancel", bundle: .module), style: .cancel)
-            alertCtrl.addAction(title: String(localized: "Discard", bundle: .module), style: .destructive) { [weak self] _ in
+            alertCtrl.addAction(title: AudioClipEditorLocalization.string("Cancel"), style: .cancel)
+            alertCtrl.addAction(title: AudioClipEditorLocalization.string("Discard"), style: .destructive) { [weak self] _ in
                 self?._cancelAction()
             }
 
@@ -249,17 +249,22 @@ public final class AudioClipController: UIViewController {
     }
 
     private func setupOutlets() {
-        title = String(localized: "Trim", bundle: .module)
+        let trimTitle = AudioClipEditorLocalization.string("Trim")
+        let deleteTitle = AudioClipEditorLocalization.string("Delete")
+
+        title = trimTitle
+        trimButton.configuration?.title = trimTitle
+        deleteButton.configuration?.title = deleteTitle
 
         trimButton.setAttributedTitle(NSAttributedString(
-            string: String(localized: "Trim", bundle: .module),
+            string: trimTitle,
             attributes: [
                 .font: AudioEditorKitFont.button,
                 .foregroundColor: AudioEditorKitColor.label,
             ]
         ), for: .normal)
         trimButton.setAttributedTitle(NSAttributedString(
-            string: String(localized: "Trim", bundle: .module),
+            string: trimTitle,
             attributes: [
                 .font: AudioEditorKitFont.button,
                 .foregroundColor: AudioEditorKitColor.label.withAlphaComponent(0.25),
@@ -267,14 +272,14 @@ public final class AudioClipController: UIViewController {
         ), for: .disabled)
 
         deleteButton.setAttributedTitle(NSAttributedString(
-            string: String(localized: "Delete", bundle: .module),
+            string: deleteTitle,
             attributes: [
                 .font: AudioEditorKitFont.button,
                 .foregroundColor: AudioEditorKitColor.label,
             ]
         ), for: .normal)
         deleteButton.setAttributedTitle(NSAttributedString(
-            string: String(localized: "Delete", bundle: .module),
+            string: deleteTitle,
             attributes: [
                 .font: AudioEditorKitFont.button,
                 .foregroundColor: AudioEditorKitColor.label.withAlphaComponent(0.25),
@@ -305,10 +310,10 @@ public final class AudioClipController: UIViewController {
             endTimeLabel.text = zeroDurationText
         }
 
-        goBackwardButton.accessibilityLabel = String(localized: "Rewind 15 Seconds", bundle: .module)
-        goForwardButton.accessibilityLabel = String(localized: "Forward 15 Seconds", bundle: .module)
+        goBackwardButton.accessibilityLabel = AudioClipEditorLocalization.string("Rewind 15 Seconds")
+        goForwardButton.accessibilityLabel = AudioClipEditorLocalization.string("Forward 15 Seconds")
 
-        saveButtonItem.title = String(localized: "Use Original", bundle: .module)
+        saveButtonItem.title = AudioClipEditorLocalization.string("Use Original")
         saveButtonItem.isEnabled = true
     }
 
@@ -410,9 +415,9 @@ public final class AudioClipController: UIViewController {
         cancelButtonItem.isEnabled = true
 
         if context.hasChanges {
-            saveButtonItem.title = String(localized: "Save Edited", bundle: .module)
+            saveButtonItem.title = AudioClipEditorLocalization.string("Save Edited")
         } else {
-            saveButtonItem.title = String(localized: "Use Original", bundle: .module)
+            saveButtonItem.title = AudioClipEditorLocalization.string("Use Original")
         }
         saveButtonItem.isEnabled = true
 
@@ -464,8 +469,8 @@ public final class AudioClipController: UIViewController {
         let isPlaying = sharedPlayer.isPlaying
         if previousIsPlaying != isPlaying {
             playPauseButton.accessibilityLabel = (isPlaying
-                ? String(localized: "Pause", bundle: .module)
-                : String(localized: "Play", bundle: .module))
+                ? AudioClipEditorLocalization.string("Pause")
+                : AudioClipEditorLocalization.string("Play"))
 
             playPauseButton.configuration?.image = UIImage(systemName: isPlaying ? "pause.fill" : "play.fill")
             playPauseButton.setNeedsUpdateConfiguration()

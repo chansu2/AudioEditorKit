@@ -24,11 +24,11 @@ public extension AudioClipController {
 
         ProgressHUDManager.showHUD(in: view) {
             ProgressHUD.animate(
-                String(localized: "Encoding", bundle: .module),
+                AudioClipEditorLocalization.string("Encoding"),
                 .circleDotSpinFade,
                 interaction: false
             )
-            ProgressHUDManager.accessibilityAnnounce(String(localized: "Encoding", bundle: .module))
+            ProgressHUDManager.accessibilityAnnounce(AudioClipEditorLocalization.string("Encoding"))
         }
 
         return audio.exportAudioSettings
@@ -59,8 +59,8 @@ public extension AudioClipController {
     }
 
     private func _saveActionErrorOccurred(_ error: Error) {
-        ProgressHUD.failed(String(localized: "Operation Failed", bundle: .module), delay: 2.0)
-        ProgressHUDManager.accessibilityAnnounce(String(localized: "Operation Failed", bundle: .module))
+        ProgressHUD.failed(AudioClipEditorLocalization.string("Operation Failed"), delay: 2.0)
+        ProgressHUDManager.accessibilityAnnounce(AudioClipEditorLocalization.string("Operation Failed"))
         ProgressHUDManager.dismissHUD(in: view, delay: 2.0) { [weak self] in
             guard let self else { return }
             presentFatalError(message: error.localizedDescription)

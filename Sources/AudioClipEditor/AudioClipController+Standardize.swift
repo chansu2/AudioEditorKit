@@ -22,11 +22,11 @@ public extension AudioClipController {
 
         ProgressHUDManager.showHUD(in: view) {
             ProgressHUD.animate(
-                String(localized: "Decoding", bundle: .module),
+                AudioClipEditorLocalization.string("Decoding"),
                 .circleDotSpinFade,
                 interaction: false
             )
-            ProgressHUDManager.accessibilityAnnounce(String(localized: "Decoding", bundle: .module))
+            ProgressHUDManager.accessibilityAnnounce(AudioClipEditorLocalization.string("Decoding"))
         }
     }
 
@@ -49,8 +49,8 @@ public extension AudioClipController {
     }
 
     private func _standardizeContextErrorOccurred(_ error: Error) {
-        ProgressHUD.failed(String(localized: "Operation Failed", bundle: .module), delay: 2.0)
-        ProgressHUDManager.accessibilityAnnounce(String(localized: "Operation Failed", bundle: .module))
+        ProgressHUD.failed(AudioClipEditorLocalization.string("Operation Failed"), delay: 2.0)
+        ProgressHUDManager.accessibilityAnnounce(AudioClipEditorLocalization.string("Operation Failed"))
 
         view.isUserInteractionEnabled = false
         ProgressHUDManager.dismissHUD(in: view, delay: 2.0) { [weak self] in

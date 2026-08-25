@@ -9,11 +9,19 @@
 import UIKit
 
 public enum AudioEditorKit {
+    /// Sets the language used by subsequently created editor controllers.
+    /// Pass values such as `en`, `ja`, `ko`, `ru`, `zh-Hans`, or `es`.
+    public static func setPreferredLanguageCode(_ languageCode: String?) {
+        AudioClipLocalization.setPreferredLanguageCode(languageCode)
+    }
+
     public static func presentEditor(
         audio: AudioFileRepresentable,
         parent: UIViewController,
-        completion: @escaping AudioClipController.AudioEditorCompletionHandler
+        completion: @escaping AudioClipController.AudioEditorCompletionHandler,
+        languageCode: String? = nil
     ) {
+        setPreferredLanguageCode(languageCode)
         let isPad = UIDevice.current.userInterfaceIdiom == .pad
         let storyboard = UIStoryboard(
             name: isPad ? "AudioClipController_iPad" : "AudioClipController",

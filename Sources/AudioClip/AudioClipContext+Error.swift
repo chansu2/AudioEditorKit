@@ -17,9 +17,15 @@ public extension AudioClipContext {
             case let .diskSpaceExhausted(requiredSpaceInBytes, availableSpaceInBytes):
                 let arg1 = AudioClipContext.fileSizeFormatter.string(fromByteCount: requiredSpaceInBytes - availableSpaceInBytes)
                 let arg2 = AudioClipContext.fileSizeFormatter.string(fromByteCount: availableSpaceInBytes)
-                return String(localized: "Another \(arg1) is required to continue editing. Available capacity is \(arg2).", bundle: .module)
+                return AudioClipLocalization.localizedString(
+                    "Another \(arg1) is required to continue editing. Available capacity is \(arg2).",
+                    in: .module
+                )
             case let .invalidRange(start, end):
-                return String(localized: "Specified range from \(start) to \(end) is invalid.", bundle: .module)
+                return AudioClipLocalization.localizedString(
+                    "Specified range from \(start) to \(end) is invalid.",
+                    in: .module
+                )
             }
         }
     }

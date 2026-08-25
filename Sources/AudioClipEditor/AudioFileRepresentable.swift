@@ -6,11 +6,12 @@
 //
 
 import AVFAudio
+import AudioClip
 import Foundation
 
 public struct AudioFileRepresentable {
     public var url: URL
-    public var aliasTitle: String = .init(localized: "Audio File")
+    public var aliasTitle: String = AudioClipEditorLocalization.string("Audio File")
     public var descriptionText: String = ""
     public var duration: TimeInterval
 
